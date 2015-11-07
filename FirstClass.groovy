@@ -1,9 +1,11 @@
-  //Agrega el ToString al codigo de Byte de la clase
-@groovy.transform.ToString
 class User {
   String name
   Date birthDate
   Profile profile
+
+  String toString(){
+    "$name $birthDate -> ${1*3*4}"
+  }
 }
 
 class Profile {
