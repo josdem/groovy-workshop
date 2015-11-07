@@ -2,4 +2,4 @@ def multiplo(n, closure){
   closure(n)
 }
 
-println multiplo(3, { it * 6 })
+println multiplo(3)  { n -> n * 6 }
