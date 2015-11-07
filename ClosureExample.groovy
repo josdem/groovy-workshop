@@ -1,5 +1,5 @@
-def closure(){
-  println "Hi Closure"
+def multiplo(n, closure){
+  closure(n)
 }
 
-closure()
+println multiplo(3, { it * 6 })
