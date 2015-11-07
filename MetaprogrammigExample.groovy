@@ -1,3 +1,4 @@
+//Groovy deja un método a todos sus clases que se llama metaClass
 String.metaClass.thisMethodNotExist = { -> "Here I am"}
 String s = "Hello World"
 
