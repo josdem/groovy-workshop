@@ -3,8 +3,12 @@ class User {
   Date birthDate
   Profile profile
 
+  String sayHi(){
+    "Hola $name"
+  }
+
   String toString(){
-    "$name $birthDate -> ${1*3*4}"
+    "$name $birthDate -> ${sayHi()}"
   }
 }
 
