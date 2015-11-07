@@ -1,3 +1,4 @@
+@groovy.transform.ToString
 class User {
   String name
   Date birthDate
@@ -6,12 +7,9 @@ class User {
   String sayHi(){
     "Hola $name"
   }
-
-  String toString(){
-    "$name $birthDate -> ${sayHi()}"
-  }
 }
 
+@groovy.transform.ToString
 class Profile {
   String twitter
   String github
