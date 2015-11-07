@@ -19,3 +19,9 @@ println otherList
 println otherList - [1,2]
 println otherList.intersect(intersectList)
 
+//Iteraciones con mapas
+def map = [uno:1, dos:2, tres:3]
+map.each {
+  println "key: ${it.key} value:${it.value}"
+}
+
