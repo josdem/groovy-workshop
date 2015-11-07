@@ -10,6 +10,7 @@ class User {
 }
 
 @groovy.transform.ToString
+@groovy.transform.TupleConstructor
 class Profile {
   String twitter
   String github
@@ -18,5 +19,5 @@ class Profile {
 def user = new User()
 user.name = 'Juan'
 user.birthDate = new Date() - 365 * 25
-user.profile = new Profile(twitter:'https://twitter.com/josdem', github:'https://github.com/josdem')
+user.profile = new Profile('https://twitter.com/josdem', 'https://github.com/josdem')
 println user
