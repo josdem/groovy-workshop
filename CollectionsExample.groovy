@@ -25,3 +25,6 @@ map.each {
   println "key: ${it.key} value:${it.value}"
 }
 
+map.cuatro = 4
+println map.get('cuatro')
+
