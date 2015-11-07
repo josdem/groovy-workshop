@@ -1,5 +1,6 @@
- String s = "Hello World"
+String.metaClass.thisMethodNotExist = { -> "Here I am"}
+String s = "Hello World"
 
  println s.class
- println s.size()
+ println s.thisMethodNotExist()
  println s.class
