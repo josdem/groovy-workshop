@@ -30,4 +30,21 @@ class ConvertionServiceSpec extends Specification {
     result == 11.67
  }
 
+ void "should send an error when the web service is not responding after 5 seconds"(){
+  given:"A city and country"
+    String country = "France"
+    String city = "Paris"
+  and:"An Stub"
+    def weatherWebServiceStub = Stub(WeatherWebService)
+    service.weatherWebService = weatherWebServiceStub
+  when:"we obtain weather"
+    weatherWebServiceStub.retrieveWeatherInFarenheitFromCountryAndCity(_,_) >> {
+      Thread.sleep(5001)
+      throw new ConverterException()
+    }
+    BigDecimal result = service.retrieveWeatherInCelsiusFromCountryAndCity(country, city)
+  then:"We expect exception"
+    thrown ConverterException
+ }
+
 }
