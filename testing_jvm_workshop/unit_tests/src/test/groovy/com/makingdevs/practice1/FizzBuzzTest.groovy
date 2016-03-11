@@ -9,4 +9,11 @@ class FizzBuzzTest extends GroovyTestCase {
     assertEquals([], fizzBuzz.serie(n))
   }
 
+  void testDoNotAcceptInvalidValue(){
+    Integer n = -60
+    shouldFail(RuntimeException){
+      fizzBuzz.serie(n)
+    }
+  }
+
 }
