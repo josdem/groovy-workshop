@@ -9,7 +9,10 @@ subprojects {
   group = "com.makingdevs"
   repositories { mavenCentral() }
 
-  dependencies { testCompile "junit:junit:4.9" }
+  dependencies {
+    testCompile "junit:junit:4.9"
+    compile "org.codehaus.groovy:groovy-all:$groovyVersion"
+  }
 }
 
 project(":repositoriesAndServices"){
@@ -39,7 +42,6 @@ project(":repositoriesAndServices"){
 
 project(":unit_tests"){
   dependencies {
-    compile "org.codehaus.groovy:groovy-all:$groovyVersion"
     testCompile "org.mockito:mockito-all:1.8.5"
   }
 }

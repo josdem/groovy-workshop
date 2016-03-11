@@ -1,6 +1,7 @@
-package com.makingdevs.specifications
+package com.makingdevs.practice2
 
 import spock.lang.Specification
+import spock.lang.Unroll
 
 class ConvertionServiceSpec extends Specification {
 
@@ -9,10 +10,10 @@ class ConvertionServiceSpec extends Specification {
   @Unroll
   void "should convert fahrenheit to celcius"(){
   expect:"We convert fahrenheit"
-    Float result = convertionService.convert(fahrenheit)
+    result == convertionService.convert(fahrenheit)
   where:"We have following values"
     fahrenheit || result
-    100        || 34
+    100        || 37.78
   }
 
 }
