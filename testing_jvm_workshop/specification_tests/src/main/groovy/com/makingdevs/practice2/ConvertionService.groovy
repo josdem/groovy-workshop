@@ -11,8 +11,12 @@ class ConvertionService {
   }
 
 	BigDecimal retrieveWeatherInCelsiusFromCountryAndCity(String country, String city){
-    BigDecimal fahrenheit = weatherWebService.retrieveWeatherInFarenheitFromCountryAndCity(country, city)
-		return convert(fahrenheit)
+    try {
+      BigDecimal fahrenheit = weatherWebService.retrieveWeatherInFarenheitFromCountryAndCity(country, city)
+		  return convert(fahrenheit)
+    } catch (RuntimeException rte){
+      throw new ConverterException()
+    }
 	}
 
 }
