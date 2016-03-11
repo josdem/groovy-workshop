@@ -1,5 +1,6 @@
 ext {
   springVersion = "4.1.6.RELEASE"
+  groovyVersion = "2.4.5"
 }
 
 subprojects {
@@ -38,6 +39,7 @@ project(":repositoriesAndServices"){
 
 project(":unit_tests"){
   dependencies {
+    compile "org.codehaus.groovy:groovy-all:$groovyVersion"
     testCompile "org.mockito:mockito-all:1.8.5"
   }
 }
