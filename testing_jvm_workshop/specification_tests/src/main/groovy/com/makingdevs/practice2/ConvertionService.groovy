@@ -15,7 +15,7 @@ class ConvertionService {
       BigDecimal fahrenheit = weatherWebService.retrieveWeatherInFarenheitFromCountryAndCity(country, city)
 		  return convert(fahrenheit)
     } catch (RuntimeException rte){
-      throw new ConverterException()
+      throw new ConverterException("Timeout")
     }
 	}
 

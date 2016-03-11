@@ -40,11 +40,12 @@ class ConvertionServiceSpec extends Specification {
   when:"we obtain weather"
     weatherWebServiceStub.retrieveWeatherInFarenheitFromCountryAndCity(_,_) >> {
       Thread.sleep(5001)
-      throw new ConverterException()
+      throw new RuntimeException()
     }
     BigDecimal result = service.retrieveWeatherInCelsiusFromCountryAndCity(country, city)
   then:"We expect exception"
-    thrown ConverterException
+    ConverterException e = thrown()
+    e.message == "Timeout"
  }
 
 }
