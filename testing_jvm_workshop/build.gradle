@@ -57,8 +57,8 @@ project(":integration_tests"){
 
 project(":functional_tests"){
   dependencies {
-    testCompile 'org.seleniumhq.selenium:selenium-firefox-driver:2.46.0'
-    testCompile 'org.seleniumhq.selenium:selenium-support:2.46.0'
+    testCompile 'org.seleniumhq.selenium:selenium-firefox-driver:2.52.0'
+    testCompile 'org.seleniumhq.selenium:selenium-support:2.52.0'
     testCompile 'info.cukes:cucumber-java:1.2.2'
   }
 }

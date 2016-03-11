@@ -74,5 +74,4 @@ class ConvertionServiceSpec extends Specification {
     2 * cacheServiceMock.retrieveWeatherInFarenheitFromCountryAndCity(country, city) >> 100 >> 100
  }
 
-
 }
